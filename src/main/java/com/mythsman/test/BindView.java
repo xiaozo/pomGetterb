@@ -9,4 +9,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface BindView {
 
+    String obj();
+    String meth();
+
 }

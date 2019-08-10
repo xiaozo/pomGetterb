@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f083f255-0a91-4f20-86ae-394107ae08bd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mythsman/test/GetterProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mythsman/test/GetterProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mythsman/test/BindViewProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mythsman/test/BindViewProcessor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mythsman/test/BindViewProcessor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mythsman/test/BindViewProcessor$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mythsman/test/BindViewProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mythsman/test/BindViewProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mythsman/test/GetterProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mythsman/test/GetterProcessor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mythsman/test/GetterProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mythsman/test/GetterProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/getterb-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/getterb-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DemoApplicationTests.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,8 +45,8 @@
       <file leaf-file-name="GetterProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/GetterProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="69" />
+            <state relative-caret-position="144">
+              <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1662#2906#0" expanded="true" />
@@ -65,8 +59,8 @@
       <file leaf-file-name="BindView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/BindView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="35" />
+            <state relative-caret-position="180">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,37 +83,35 @@
       <file leaf-file-name="BindViewProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-164">
-              <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+            <state relative-caret-position="262">
+              <caret line="108" column="92" selection-start-line="108" selection-start-column="92" selection-end-line="108" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1808#2466#0" expanded="true" />
-                <element signature="e#2465#2466#0" expanded="true" />
-                <element signature="e#2796#3581#0" expanded="true" />
-                <element signature="e#3580#3581#0" expanded="true" />
+                <element signature="e#2038#2862#0" expanded="true" />
+                <element signature="e#2861#2862#0" expanded="true" />
+                <element signature="e#2990#5669#0" expanded="true" />
+                <element signature="e#5668#5669#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JCTree.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/lib/tools.jar!/com/sun/tools/javac/tree/JCTree.class">
+      <file leaf-file-name="BindViewObj.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewObj.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="2473" column="20" selection-start-line="2473" selection-start-column="20" selection-end-line="2473" selection-end-column="20" />
+            <state relative-caret-position="135">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="37" />
               <folding>
-                <element signature="e#71265#71266#0" expanded="true" />
-                <element signature="e#71305#71306#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#481#482#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#613#614#0" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeTranslator.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/lib/tools.jar!/com/sun/tools/javac/tree/TreeTranslator.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -141,8 +133,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -155,6 +147,7 @@
       <find>visitClassDef</find>
       <find>maven-compiler-plugin</find>
       <find>JCClassDecl</find>
+      <find>JCTree.JCVariableDecl</find>
       <find>tree</find>
       <find>components</find>
     </findStrings>
@@ -171,10 +164,11 @@
         <option value="$PROJECT_DIR$/src/test/java/Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/DemoApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mythsman/test/MyGetterb.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mythsman/test/GetterProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mythsman/test/Getterb.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViews.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewObj.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewProcessor.java" />
       </list>
     </option>
@@ -367,7 +361,7 @@
       <workItem from="1565322591213" duration="511000" />
       <workItem from="1565324278629" duration="1051000" />
       <workItem from="1565326879493" duration="1044000" />
-      <workItem from="1565403262854" duration="16612000" />
+      <workItem from="1565403262854" duration="19652000" />
     </task>
     <servers />
   </component>
@@ -386,7 +380,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24510000" />
+    <option name="totallyTimeSpent" value="27550000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="344" y="273" width="2085" height="1080" extended-state="0" />
@@ -816,13 +810,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/lib/tools.jar!/com/sun/tools/javac/tree/JCTree.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="2473" column="20" selection-start-line="2473" selection-start-column="20" selection-end-line="2473" selection-end-column="20" />
+        <state relative-caret-position="15">
+          <caret line="2294" column="24" selection-start-line="2294" selection-start-column="24" selection-end-line="2294" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/BindView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="15" />
           <folding>
-            <element signature="e#71265#71266#0" expanded="true" />
-            <element signature="e#71305#71306#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -837,20 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/BindView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/GetterProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="69" />
+        <state relative-caret-position="144">
+          <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1662#2906#0" expanded="true" />
@@ -861,14 +869,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mythsman/test/BindViewProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-164">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+        <state relative-caret-position="262">
+          <caret line="108" column="92" selection-start-line="108" selection-start-column="92" selection-end-line="108" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1808#2466#0" expanded="true" />
-            <element signature="e#2465#2466#0" expanded="true" />
-            <element signature="e#2796#3581#0" expanded="true" />
-            <element signature="e#3580#3581#0" expanded="true" />
+            <element signature="e#2038#2862#0" expanded="true" />
+            <element signature="e#2861#2862#0" expanded="true" />
+            <element signature="e#2990#5669#0" expanded="true" />
+            <element signature="e#5668#5669#0" expanded="true" />
           </folding>
         </state>
       </provider>
