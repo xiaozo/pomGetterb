@@ -5,6 +5,7 @@ import com.sun.tools.javac.api.JavacTrees;
 import com.sun.tools.javac.code.Flags;
 import com.sun.tools.javac.processing.JavacProcessingEnvironment;
 import com.sun.tools.javac.tree.JCTree;
+import com.sun.tools.javac.tree.JCTree.JCVariableDecl;
 import com.sun.tools.javac.tree.TreeMaker;
 import com.sun.tools.javac.tree.TreeTranslator;
 import com.sun.tools.javac.util.*;
@@ -46,72 +47,37 @@ public class BindViewProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-        Set<? extends Element> sets = roundEnv.getElementsAnnotatedWith(BindViews.class);
         Set<? extends Element> set = roundEnv.getElementsAnnotatedWith(BindView.class);
-        Map<String, ArrayList<BindViewObj>> map = new HashMap<>();
 
         set.forEach(element -> {
             JCTree jcTree = trees.getTree(element);
+            TypeElement enClosingElement = (TypeElement)element.getEnclosingElement();
+            JCTree.JCClassDecl jcClassDecl = (JCTree.JCClassDecl)trees.getTree(enClosingElement);
+
             jcTree.accept(new TreeTranslator() {
                 @Override
-                public void visitVarDef(JCTree.JCVariableDecl var1) {
+                public void visitVarDef(JCVariableDecl var1) {
 
-                    TypeElement enClosingElement = (TypeElement)element.getEnclosingElement();
-                    String packageName = getPackageName(enClosingElement);
-                    String complite = getClassName(enClosingElement,packageName);
-
-                    ArrayList list = map.get(complite);
-                    if (list == null) {
-                        list = new ArrayList();
-                        map.put(complite,list);
-                    }
                     if (var1.getKind().equals(Tree.Kind.VARIABLE)) {
-                        BindViewObj obj = new BindViewObj(element,var1);
-                        list.add(obj);
+                        //添加方法属性
+                        String fieldName = var1.getName().toString();
+                        fieldName = fieldName + "_str";
+                        jcClassDecl.defs = jcClassDecl.defs.prepend(treeMaker.VarDef(treeMaker.Modifiers(Flags.PUBLIC),names.fromString(fieldName),memberAccess("java.lang.String"),null));
+
+                        //增加方法
+                        String obj = element.getAnnotation(BindView.class).obj();
+                        String meth = element.getAnnotation(BindView.class).meth();
+
+                        ListBuffer<JCTree.JCStatement> statements = new ListBuffer<>();
+                        JCTree.JCExpression param = treeMaker.Select(treeMaker.Ident(names.fromString("this")), var1.getName());
+                        statements.append(treeMaker.Return( treeMaker.Apply(List.of(var1.vartype),memberAccess(obj+"."+meth),List.of(param))));
+                        JCTree.JCBlock body = treeMaker.Block(0, statements.toList());
+                        //get
+                        JCTree.JCMethodDecl newGetMethodDecl = treeMaker.MethodDef(treeMaker.Modifiers(Flags.PUBLIC), getNewMethodName(fieldName), memberAccess("java.lang.String"), List.nil(), List.nil(), List.nil(), body, null);
+                        jcClassDecl.defs = jcClassDecl.defs.prepend(newGetMethodDecl);
                     }
+                    super.visitVarDef(var1);
 
-
-                }
-
-            });
-        });
-
-        sets.forEach(element -> {
-            JCTree jcTree = trees.getTree(element);
-            jcTree.accept(new TreeTranslator() {
-                @Override
-                public void visitClassDef(JCTree.JCClassDecl jcClassDecl) {
-//                    String fieldName = element.getSimpleName().toString();
-//                    fieldName = fieldName + "_str";
-//                    jcClassDecl.defs = jcClassDecl.defs.prepend(treeMaker.VarDef(treeMaker.Modifiers(Flags.PUBLIC),names.fromString(fieldName),memberAccess("java.lang.Integer"),null));
-
-                    String className = element.getSimpleName().toString();
-                    ArrayList<BindViewObj> list = map.get(className);
-                    if (list != null) {
-                        for (BindViewObj bindViewObj : list) {
-                            JCTree.JCVariableDecl tree = bindViewObj.tree;
-                            if (tree.getKind().equals(Tree.Kind.VARIABLE)) {
-                                //添加方法属性
-                                String fieldName = tree.getName().toString();
-                                fieldName = fieldName + "_str";
-                                jcClassDecl.defs = jcClassDecl.defs.prepend(treeMaker.VarDef(treeMaker.Modifiers(Flags.PUBLIC),names.fromString(fieldName),memberAccess("java.lang.String"),null));
-
-                                //增加方法
-                                Element enClosingElement = (Element) bindViewObj.typeElement;
-                                String obj = enClosingElement.getAnnotation(BindView.class).obj();
-                                String meth = enClosingElement.getAnnotation(BindView.class).meth();
-                                ListBuffer<JCTree.JCStatement> statements = new ListBuffer<>();
-                                JCTree.JCExpression param = treeMaker.Select(treeMaker.Ident(names.fromString("this")), tree.getName());
-                                statements.append(treeMaker.Return( treeMaker.Apply(List.of(tree.vartype),memberAccess(obj+"."+meth),List.of(param))));
-                                JCTree.JCBlock body = treeMaker.Block(0, statements.toList());
-                                //get
-                                JCTree.JCMethodDecl newGetMethodDecl = treeMaker.MethodDef(treeMaker.Modifiers(Flags.PUBLIC), getNewMethodName(fieldName), memberAccess("java.lang.String"), List.nil(), List.nil(), List.nil(), body, null);
-                                jcClassDecl.defs = jcClassDecl.defs.prepend(newGetMethodDecl);
-                            }
-                        }
-                    }
-
-                    super.visitClassDef(jcClassDecl);
 
                 }
 
